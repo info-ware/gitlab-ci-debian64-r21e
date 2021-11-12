@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:bullseye
 
 RUN apt-get update 
 RUN apt-get install -y build-essential devscripts cmake gcc g++ debhelper dh-systemd dh-exec pkg-config libtool autoconf
@@ -19,7 +19,7 @@ RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 # --- Android NDK
 # ------------------------------------------------------
 
-ENV ANDROID_NDK_VERSION="r18b"
+ENV ANDROID_NDK_VERSION="r21e"
 ENV ANDROID_NDK_HOME=/opt/android-ndk
 
 # download
